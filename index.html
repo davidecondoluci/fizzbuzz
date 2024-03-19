@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FizzBuzz</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 flex justify-center items-center">
+    <div id="start" class="mx-auto p-8 text-center">
+      <h2 class="text-3xl mb-10">FizzBuzz Grid</h2>
+
+      <div id="fizzBuzzForm">
+        <input
+          placeholder="N"
+          type="number"
+          id="number"
+          name="number"
+          class="rounded-lg border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 w-32 p-2"
+        />
+        <input
+          placeholder="Fizz"
+          type="number"
+          id="fizz"
+          name="fizz"
+          class="rounded-lg border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 w-32 p-2"
+        />
+        <input
+          placeholder="Buzz"
+          type="number"
+          id="buzz"
+          name="buzz"
+          class="rounded-lg border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 w-32 p-2"
+        />
+        <button
+          type="submit"
+          id="button"
+          onclick="generator(event)"
+          class="ml-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Genera griglia!
+        </button>
+      </div>
+    </div>
+
+    <div class="content-evenly m-10">
+      <div
+        id="gridContainer"
+        class="hidden grid grid-cols-5 gap-2 justify-items-center"
+      ></div>
+      <button
+        class="hidden mt-4 bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded justify-self-center"
+        id="backButton"
+      >
+        Torna Indietro
+      </button>
+    </div>
+
+    <script src="/main.js"></script>
+  </body>
+</html>
